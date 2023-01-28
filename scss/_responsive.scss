@@ -1,0 +1,59 @@
+@include media-mobile{
+    .card{
+        width: 320px;
+        margin: 40px 0;
+
+        &__header{
+            background: url('../images/image-header-mobile.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 240px;
+        }
+
+        &__bottom{
+            padding: 30px;
+
+            h1{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+
+@include media-laptop{
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 1080px;
+        height: 446px;
+        
+        &__header{
+            grid-column: 2;
+            background: url('../images/image-header-desktop.jpg');
+        }
+
+        &__bottom{
+            grid-row: 1;
+            text-align: left;
+            padding: 90px;
+
+            h1{
+                width: 90%;
+            }
+
+            .paragraph{
+                width: 90%;
+            }
+
+            .stats{
+                margin-top: 30px;
+                display: inline-flex;
+
+                .stat{
+                    margin-right: 4em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+$slightly-transparent-white1: hsla(0, 0%, 100%, 0.6);
+$font-weights: (
+    "regular" : 400,
+    "bold" : 700,
+);
+
+@function weight($a){
+    @return map-get($font-weights, $a);
+}
+
+@mixin media-laptop{
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-mobile{
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
